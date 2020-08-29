@@ -1,0 +1,25 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include flexbox();
+    flex-direction: column;
+
+}
+
+.playbox {
+    margin-top: 30px;
+    height: 300px;
+    width: 300px;
+    // border: 1px solid;
+    border-top-color: rgb(187, 76, 94);
+    border-right-color: hotpink;
+    border-bottom-color: blueviolet;
+    border-left-color: coral;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #518ecf inset;
+    box-shadow: 0 0 10px #0b78e6;
+}

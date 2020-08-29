@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex box demo</title>
-    <style>
-      .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        /* flex-flow: column wrap; */
-      }
-      .item {
-        order: 5;
-        /* margin: 20px; */
-        /* width: 25%; */
-        width: 100px;
-        height: 100px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-      }
-      .red {
-        background-color: red;
-      }
-      .blue {
-        background-color: blue;
-      }
-      .yellow {
-        background-color: yellow;
-      }
-      .green {
-        background-color: green;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="item red">
-        1111
-        <br />
-        adfafafd
-      </div>
-      <div class="item blue">22222</div>
-      <div class="item green">3333</div>
-      <div class="item yellow">44444</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex box demo</title>
+  <link rel="stylesheet" href="flex.css">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      /* flex-flow: column wrap; */
+    }
+
+    .item {
+      order: 5;
+      /* margin: 20px; */
+      /* width: 25%; */
+      width: 100px;
+      height: 100px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item red">
+      1111
+      <br />
+      adfafafd
     </div>
-  </body>
+    <div class="item blue">22222</div>
+    <div class="item green">3333</div>
+    <div class="item yellow">44444</div>
+  </div>
+
+  <div class="playbox">
+
+  </div>
+</body>
+
 </html>

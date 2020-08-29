@@ -1,0 +1,184 @@
+@import 'flex';
+
+@mixin border {
+    // border: 1px solid #d2dae2; //#130f40;
+}
+
+@mixin navBg($bgName) {
+    background: url('img/'+$bgName+'.png') no-repeat;
+    background-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "STHeitiSC-Light", simsun, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "sans-serif";
+}
+
+$headerHeight: 80px;
+$containerHeight: 100vh;
+
+.container {
+    max-width: 1920px;
+    min-width: 1040px;
+    height: $containerHeight;
+    margin: 0 60px;
+    background: #1e272e;
+    background-image: url(img/full-big.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    color: #d2dae2;
+    overflow: scroll;
+    @include border();
+
+    header {
+        height: $headerHeight;
+        @include flexbox();
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    nav {
+        margin-top: 20px;
+        background: url('img/nav-b.png') no-repeat;
+        background-size: cover;
+        padding: 20px;
+        @include border();
+
+        ul {
+            list-style: none;
+            @include flexbox();
+            justify-content: space-around;
+            gap: 30px;
+
+            li {
+
+                @include flexbox();
+                flex-direction: column;
+                justify-content: start;
+                height: 100px;
+                width: 180px;
+                flex: 1;
+
+                h3 {
+                    margin-top: 15px;
+                }
+
+                div {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+
+            .gb {
+                @include navBg('gb');
+
+                h3 {
+                    color: #2ecc71;
+                }
+            }
+
+            .yb {
+                @include navBg('yb');
+
+                h3 {
+                    color: #f39c12;
+                }
+            }
+
+            .bb {
+                @include navBg('bb');
+
+                h3 {
+                    color: #3498db;
+                }
+            }
+
+            .pb {
+                @include navBg('pb');
+
+                h3 {
+                    color: #9b59b6;
+                }
+            }
+
+            .wb {
+                @include navBg('wb');
+
+                h3 {
+                    color: #ecf0f1;
+                }
+            }
+        }
+    }
+
+    main {
+        @include flexbox();
+
+        .left {
+            @include border();
+            width: 350px;
+
+            .top {
+                background: url(img/jrjc.png) no-repeat;
+                background-size: 100%;
+                height: 230px;
+                @include flexbox();
+                justify-content: space-between;
+                flex-direction: column;
+
+                .title {
+                    height: 30px;
+                    @include flexbox();
+                    justify-content: flex-start;
+                }
+
+                .content {
+                    @include flexbox();
+                    flex: 1;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .bottom {
+                background: url(img/jcxmtj.png) no-repeat;
+                background-size: 100%;
+                height: 230px;
+
+                .title {
+                    height: 30px;
+                    @include flexbox();
+                }
+
+                .content {
+                    @include flexbox();
+                    flex: 1;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .right {
+            @include border();
+            width: 350px;
+        }
+
+        .middle {
+            flex-grow: 1;
+            height: 420px;
+            box-sizing: border-box;
+            @include border();
+            background: url('img/map-b.png') no-repeat;
+            background-size: 100%;
+        }
+    }
+}

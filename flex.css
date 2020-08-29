@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playbox {
+  margin-top: 30px;
+  height: 300px;
+  width: 300px;
+  border-top-color: #bb4c5e;
+  border-right-color: hotpink;
+  border-bottom-color: blueviolet;
+  border-left-color: coral;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #518ecf inset;
+  box-shadow: 0 0 10px #0b78e6;
+}
